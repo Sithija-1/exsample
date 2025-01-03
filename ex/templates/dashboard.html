@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Management Dashboard</title>
+  <link rel="shortcut icon" type="x-icon" href="{{url_for('static',filename='images/bu.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='dashborad.css')}}"/>
+</head>
+<body>
+  <nav> 
+    <div class="logo">bus Manegment</div>
+    <div class="search">
+        
+    </div>
+</nav> 
+
+        
+<br>
+<br>
+<br>
+<br>
+
+<ul>
+    <li><a href="#">dash board</a></li>
+    <li><a href="vehical_details">vehicle details</a></li>
+    <li>                                          <!--main(vehicle document) dropdown-->      
+        <a href="#">vehicle document +</a>
+        <ul class="dropdown">
+
+            <li><a href="insurence">insurence</a></li>
+            <li><a href="revenue">Revenue License</a></li>
+            <li><a href="emssion">Emission Test </a></li>
+            <li><a href="permit">permit</a></li>
+        </ul>
+    </li>
+
+     <li>                                        <!--vehical user dropdown-->  
+        <a href="#">vehicle user +</a>
+        <ul class="vehical_user">
+
+            <li><a href="driverdetails">driver details</a></li>
+            <li><a href="conductordetails">conductor details </a></li>
+
+        </ul>
+    </li>
+    <li><a href="input">daily input</a></li>
+    <li><a href="expenses">daily expenses</a></li>
+    <li>                                        <!--maintanence dropdown-->  
+        <a href="#">maintanence +</a>
+        <ul class="maintanence">
+
+            <li><a href="oil">oil</a></li>
+            <li><a href="service">service </a></li>
+            <li>                                   <!--tyer dropdown-->  
+                <a href="#">tyer +</a>
+                <ul class="tyer"> 
+                    <li><a href="left_front_tyer">left front tyer</a></li>
+                    <li><a href="rigth_front_tyer">right front tyer </a></li>
+                    <li><a href="left_back_inside_tyer">left back inside tyer</a></li>
+                    <li><a href="left_back_outside_tyer">left back outsude tyer</a></li>
+                    <li><a href="right_back_inside_tyer">right back inside tyer </a></li>
+                    <li><a href="rigth_back_outside_tyer">right back outsude tyer</a></li>
+
+                </ul>
+            </li>
+
+        </ul>
+    </li>
+    <li><a href="issues">isssues</a></li>
+    
+</ul>
+  <main class="dashboard">
+    <section class="stats">
+      <div class="card">
+        <h2>Net Profit</h2>
+        <p>RS: <strong>{{ daily_profit }}</strong></p>
+        <small><p>Today is Day: {{ day_in_cycle }} of the 30-day cycle</p></small>
+      </div>
+      <div class="card">
+        <h2>Yesterday's Profit</h2>
+        <p>RS: <strong>{{ yesterday_profit }}</strong></p>
+      </div>
+      
+      
+      <div class="card">
+        <h2>Maintain</h2>
+        {% if profit_percentage is not none %}
+          <p>10% of Daily Profit: {{ profit_percentage }}</p>
+        {% else %}
+        <p>No profit to calculate maintanence_cost.</p>
+        {% endif %}
+         
+      </div>
+    </section>
+
+    <section class="details">
+      <div class="expiry">
+        <h3>Expiry Dates</h3>
+        <ul class="ex">
+          <li>insurence: <p>Days Left :<b> {{ output }}</b></p></li><br>
+          <li>Revenue: <p>Days Left : <b>{{ output1 }}</b></p></li><br>
+          <li>Emission: <p>Days Left : <b>{{ output2 }}</b></p></li><br>
+          <li>Permit: <p>Days Left : <b>{{ output3 }}</b></p></li>
+        </ul>
+      </div>
+      <div class="tyre">
+        <h3>Tyre</h3>
+        <ul class="ex">
+          <li>Left Front Tyer: <b>{{left_front1}}</b></li>
+          <li>Right Front Tyer: <b>{{right_front1}}</b></li>
+          <li>LeftBack Inside Tyer:<b>{{left_back_inside_tyer1}}</b></li>
+          <li>LeftBack Outside Tyer:<b>{{left_back_outside_tyer1}}</b></li>
+          <li>RightBack Inside Tyer:<b>{{right_back_inside_tyer1}}</b></li>
+          <li>RightBack Outside Tyer:<b>{{rigth_back_outside_tyer1}}</b></li>
+        </ul>
+      </div>
+      <div class="info">
+        <div class="card">
+          <h3>Service</h3>
+          <p>Next Service: <b>{{ services1 }} </b></p>
+        </div>
+        <div class="card">
+          <h3>Oil</h3>
+          <p>Mileage Difference:<b> {{ more1 }}</b></p>
+        </div>
+        <div class="card">
+          <a href="issues_view"><h3>Issues</h3></a>
+          <p><strong>{{issue_count}}</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

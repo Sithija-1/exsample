@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>left front tyer</title>
+    <link rel="shortcut icon" type="x-icon" href="{{url_for('static',filename='images/bu.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='left_front_tyer.css')}}"/>
+</head>
+<body>
+
+    <nav> 
+        <div class="logo">bus Manegment</div>
+        <div class="search">
+             
+    </nav> 
+    
+            
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <ul>
+        <li><a href="dashboard">dash board</a></li>
+        <li><a href="vehical_details">vehicle details</a></li>
+        <li>                                          <!--main(vehicle document) dropdown-->      
+            <a href="#">vehicle document +</a>
+            <ul class="dropdown">
+    
+                <li><a href="insurence">insurence</a></li>
+                <li><a href="revenue">Revenue License</a></li>
+                <li><a href="emssion">Emission Test </a></li>
+                <li><a href="permit">permit</a></li>
+            </ul>
+        </li>
+    
+         <li>                                        <!--vehical user dropdown-->  
+            <a href="#">vehicle user +</a>
+            <ul class="vehical_user">
+    
+                <li><a href="driverdetails">driver details</a></li>
+                <li><a href="conductordetails">conductor details </a></li>
+    
+            </ul>
+        </li>
+        <li><a href="input">daily input</a></li>
+        <li><a href="expenses">daily expenses</a></li>
+        <li>                                        <!--maintanence dropdown-->  
+            <a href="#">maintanence +</a>
+            <ul class="maintanence">
+    
+                <li><a href="oil">oil</a></li>
+                <li><a href="service">service </a></li>
+                <li>                                   <!--tyer dropdown-->  
+                    <a href="#">tyer +</a>
+                    <ul class="tyer"> 
+                        <li><a href="left_front_tyer">left front tyer</a></li>
+                        <li><a href="rigth_front_tyer">right front tyer </a></li>
+                        <li><a href="left_back_inside_tyer">left back inside tyer</a></li>
+                        <li><a href="left_back_outside_tyer">left back outsude tyer</a></li>
+                        <li><a href="right_back_inside_tyer">right back inside tyer </a></li>
+                        <li><a href="rigth_back_outside_tyer">right back outsude tyer</a></li>
+    
+                    </ul>
+                </li>
+    
+            </ul>
+        </li>
+        <li><a href="issues">isssues</a></li>
+        
+    </ul>
+
+    <div class="big ">                          <!--from--> 
+        <div class="form">
+            <h2>Left Front Tyer </h2>
+    
+            <br><br>
+            <form action="left_front_tyer" method="post"  enctype="multipart/form-data">
+                <div>
+                    <label for="Tyer_Change_Data">Tyer Change Data </label>
+                    <input type="text" id="Tyer_Change_Data" name="Tyer_Change_Data"> <br>
+                </div>
+            
+                <br>
+            
+                <div>
+                    <label for="Tyer_Type">Tyer Type </label>
+                    <input type="text" id="Tyer_Type" name="Tyer_Type">
+                </div>
+            
+                <br>
+            
+                <div>
+                    <label for="Odometar">Odometar</label>
+                    <input type="text" id="Odometar" name="Odometar">
+                </div>
+            
+                <br>
+            
+                <div>
+                    <label for="pressure">pressure </label>
+                    <input type="text" id="pressure" name="pressure">
+                </div>
+
+                <br>
+            
+                <div>
+                    <label for="Tyer_Price">Tyer Price </label>
+                    <input type="text" id="Tyer_Price" name="Tyer_Price">
+                </div>
+            
+                <br>
+
+                <div>
+                     <label for="Bill_Image">Bill Image </label>
+                    <input type="file" id="Bill_Image" name="Bill_Image">
+                 </div>
+            
+
+                <br>
+
+                <div >
+                    <label for="comment">comment </label>
+                    <textarea rows="10" class="comment"  id="comment" name="comment"></textarea>
+                </div>
+
+                <br>
+
+                <div>
+                    <button class="btn">submit</button>
+                </div>
+
+            </form>  
+        </div>  
+    </div>
+    
+    
+</body>
+</html>

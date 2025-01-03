@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Details</title>
+    <link rel="shortcut icon" type="x-icon" href="{{url_for('static',filename='images/bu.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='driverdetails.css')}}"/>
+</head>
+<body>
+
+    <nav> 
+        <div class="logo">Bus Management</div>
+        <div class="search">
+            
+        </div>
+    </nav> 
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <ul>
+        <li><a href="dashboard">Dashboard</a></li>
+        <li><a href="vehical_details">Vehicle Details</a></li>
+        <li>                                          <!--main(vehicle document) dropdown-->      
+            <a href="#">Vehicle Document +</a>
+            <ul class="dropdown">
+                <li><a href="insurence">Insurance</a></li>
+                <li><a href="revenue">Revenue License</a></li>
+                <li><a href="emssion">Emission Test</a></li>
+                <li><a href="permit">Permit</a></li>
+            </ul>
+        </li>
+        <li>                                        <!--vehical user dropdown-->  
+            <a href="#">Vehicle User +</a>
+            <ul class="vehical_user">
+                <li><a href="driverdetails">Driver Details</a></li>
+                <li><a href="conductordetails">Conductor Details</a></li>
+            </ul>
+        </li>
+        <li><a href="input">Daily Input</a></li>
+        <li><a href="expenses">Daily Expenses</a></li>
+        <li>                                        <!--maintanence dropdown-->  
+            <a href="#">Maintenance +</a>
+            <ul class="maintanence">
+                <li><a href="oil">Oil</a></li>
+                <li><a href="service">Service</a></li>
+                <li>                                   <!--tyer dropdown-->  
+                    <a href="#">Tyre +</a>
+                    <ul class="tyer"> 
+                        <li><a href="left_front_tyer">Left Front Tyre</a></li>
+                        <li><a href="right_front_tyer">Right Front Tyre</a></li>
+                        <li><a href="left_back_inside_tyer">Left Back Inside Tyre</a></li>
+                        <li><a href="left_back_outside_tyer">Left Back Outside Tyre</a></li>
+                        <li><a href="right_back_inside_tyer">Right Back Inside Tyre</a></li>
+                        <li><a href="right_back_outside_tyer">Right Back Outside Tyre</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="issues">Issues</a></li>
+    </ul>
+
+    <div class="big ">
+        <div class="form">
+            <h2>Driver Details</h2>
+            <br><br>
+            <form action="/driverdetails" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="Driver_Name">Driver Name</label>
+                    <input type="text" id="Driver_Name" name="Driver_Name"><br>
+                </div>
+                <br>
+                <div>
+                    <label for="Date_of_Birthday">Date of Birthday</label>
+                    <input type="text" id="Date_of_Birthday" name="Date_of_Birthday">
+                </div>
+                <br>
+                <div>
+                    <label for="Driver_Image">Driver Image</label>
+                    <input type="file" id="Driver_Image" name="Driver_Image">
+                </div>
+                <br>
+                <div>
+                    <label for="Email">Email</label>
+                    <input type="text" id="Email" name="Email">
+                </div>
+                <br>
+                <div>
+                    <label for="Phone_Number">Phone Number</label>
+                    <input type="text" id="Phone_Number" name="Phone_Number">
+                </div>
+                <br>
+                <div>
+                    <label for="Address">Address</label>
+                    <input type="text" id="Address" name="Address">
+                </div>
+                <br>
+                <div>
+                    <label for="ID_Image">ID Image</label>
+                    <input type="file" id="ID_Image" name="ID_Image">
+                </div>
+                <br>
+                <div>
+                    <label for="License_Number_ID">License Number ID</label>
+                    <input type="text" id="License_Number_ID" name="License_Number_ID">
+                </div>
+                <br>
+                <div>
+                    <label for="License_Image">License Image</label>
+                    <input type="file" id="License_Image" name="License_Image">
+                </div>
+                <br>
+                <div>
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>  
+        </div>  
+    </div>
+</body>
+</html>

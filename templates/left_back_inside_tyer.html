@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Back Inside Tyre</title>
+    <link rel="shortcut icon" type="x-icon" href="{{url_for('static',filename='images/bu.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='left_back_inside_tyer.css')}}"/>
+</head>
+<body>
+    <nav> 
+        <div class="logo">Bus Management</div>
+        <div class="search">
+             
+        </div>
+    </nav> 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <ul>
+        <li><a href="dashboard">Dashboard</a></li>
+        <li><a href="vehical_details">Vehicle Details</a></li>
+        <li>
+            <a href="#">Vehicle Document +</a>
+            <ul class="dropdown">
+                <li><a href="insurence">Insurance</a></li>
+                <li><a href="revenue">Revenue License</a></li>
+                <li><a href="emission">Emission Test</a></li>
+                <li><a href="permit">Permit</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Vehicle User +</a>
+            <ul class="vehical_user">
+                <li><a href="driverdetails">Driver Details</a></li>
+                <li><a href="conductordetails">Conductor Details</a></li>
+            </ul>
+        </li>
+        <li><a href="input">Daily Input</a></li>
+        <li><a href="expenses">Daily Expenses</a></li>
+        <li>
+            <a href="#">Maintenance +</a>
+            <ul class="maintanence">
+                <li><a href="oil">Oil</a></li>
+                <li><a href="service">Service</a></li>
+                <li>
+                    <a href="#">Tyre +</a>
+                    <ul class="tyer"> 
+                        <li><a href="left_front_tyer">Left Front Tyre</a></li>
+                        <li><a href="right_front_tyer">Right Front Tyre</a></li>
+                        <li><a href="left_back_inside_tyer">Left Back Inside Tyre</a></li>
+                        <li><a href="left_back_outside_tyer">Left Back Outside Tyre</a></li>
+                        <li><a href="right_back_inside_tyer">Right Back Inside Tyre</a></li>
+                        <li><a href="right_back_outside_tyer">Right Back Outside Tyre</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="issues">Issues</a></li>
+    </ul>
+
+    <div class="big">
+        <div class="form">
+            <h2>Left Back Inside Tyre</h2>
+            <form action="/left_back_inside_tyer" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="Tyer_Change_Data">Tyre Change Date</label>
+                    <input type="text" id="Tyer_Change_Data" name="Tyer_Change_Data"><br>
+                </div>
+                <br>
+                <div>
+                    <label for="Tyer_Type">Tyre Type</label>
+                    <input type="text" id="Tyer_Type" name="Tyer_Type">
+                </div>
+                <br>
+                <div>
+                    <label for="Odometar">Odometer</label>
+                    <input type="text" id="Odometar" name="Odometar">
+                </div>
+                <br>
+                <div>
+                    <label for="pressure">Pressure</label>
+                    <input type="text" id="pressure" name="pressure">
+                </div>
+                <br>
+                <div>
+                    <label for="Tyer_Price">Tyre Price</label>
+                    <input type="text" id="Tyer_Price" name="Tyer_Price">
+                </div>
+                <br>
+                <div>
+                    <label for="Bill_Image">Bill Image</label>
+                    <input type="file" id="Bill_Image" name="Bill_Image">
+                </div>
+                <br>
+                <div>
+                    <label for="comment">Comment</label>
+                    <textarea rows="10" class="comment" id="comment" name="comment"></textarea>
+                </div>
+                <br>
+                <div>
+                    <button class="btn">Submit</button>
+                </div>
+            </form>  
+        </div>  
+    </div>
+</body>
+</html>

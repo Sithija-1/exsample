@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>permit</title>
+    <link rel="shortcut icon" type="x-icon" href="{{url_for('static',filename='images/bu.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='permit.css')}}"/>
+</head>
+<body>
+
+    <nav> 
+        <div class="logo">bus Manegment</div>
+        <div class="search">
+             
+        </div>
+    </nav> 
+    
+            
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <ul>
+        <li><a href="dashboard">dash board</a></li>
+        <li><a href="vehical_details">vehicle details</a></li>
+        <li>                                          <!--main(vehicle document) dropdown-->      
+            <a href="#">vehicle document +</a>
+            <ul class="dropdown">
+    
+                <li><a href="insurence">insurence</a></li>
+                <li><a href="revenue">Revenue License</a></li>
+                <li><a href="emssion">Emission Test </a></li>
+                <li><a href="permit">permit</a></li>
+            </ul>
+        </li>
+    
+         <li>                                        <!--vehical user dropdown-->  
+            <a href="#">vehicle user +</a>
+            <ul class="vehical_user">
+    
+                <li><a href="driverdetails">driver details</a></li>
+                <li><a href="conductordetails">conductor details </a></li>
+    
+            </ul>
+        </li>
+        <li><a href="input">daily input</a></li>
+        <li><a href="expenses">daily expenses</a></li>
+        <li>                                        <!--maintanence dropdown-->  
+            <a href="#">maintanence +</a>
+            <ul class="maintanence">
+    
+                <li><a href="oil">oil</a></li>
+                <li><a href="service">service </a></li>
+                <li>                                   <!--tyer dropdown-->  
+                    <a href="#">tyer +</a>
+                    <ul class="tyer"> 
+                        <li><a href="left_front_tyer">left front tyer</a></li>
+                        <li><a href="rigth_front_tyer">right front tyer </a></li>
+                        <li><a href="left_back_inside_tyer">left back inside tyer</a></li>
+                        <li><a href="left_back_outside_tyer">left back outsude tyer</a></li>
+                        <li><a href="right_back_inside_tyer">right back inside tyer </a></li>
+                        <li><a href="rigth_back_outside_tyer">right back outsude tyer</a></li>
+    
+                    </ul>
+                </li>
+    
+            </ul>
+        </li>
+        <li><a href="issues">isssues</a></li>
+        
+    </ul>
+
+    <div class="big ">
+        <div class="form">
+            <h2>Permit </h2>
+    
+            <br><br>
+            <form action="permit" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="number">number </label>
+                    <input type="text" id="number" name="number"> <br>
+                </div>
+            
+                <br>
+            
+                <div>
+                    <label for="start date">start date </label>
+                    <input type="date" id="start_date" name="start_date">
+                </div>
+            
+                <br>
+            
+                <div>
+                    <label for="expiry date">expiry date </label>
+                    <input type="date" id="expiry_date" name="expiry_date">
+                </div>
+            
+                <br>
+            
+                <div>
+                    <label for="driver name">driver name </label>
+                    <input type="text" id="driver_name" name="driver_name">
+                </div>
+
+                <br>
+            
+                <div>
+                    <label for="driver license ID number">driver license ID number </label>
+                    <input type="text" id="driver_license_ID_number" name="driver_license_ID_number">
+                </div>
+            
+                <br>
+
+                <div>
+                     <label for="Driver License Image">Driver License Image </label>
+                    <input type="file" id="Driver_License_Image" name="Driver_License_Image">
+                 </div>
+            
+
+                <br>
+
+                <div>
+                    <label for="Driver Medical Image">Driver Medical Image </label>
+                   <input type="file" id="Driver_Medical_Image" name="Driver_Medical_Image">
+                </div>
+
+                <br>
+
+                <div >
+                    <label for="comment">issues</label>
+                    <textarea rows="10"  class="comment" id="comment" name="comment"></textarea>
+                </div>
+                <br>
+                <div>
+                    <button class="btn">submit</button>
+                </div>
+
+            </form>  
+        </div>  
+    </div>
+    
+    
+</body>
+</html>
